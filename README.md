@@ -3,6 +3,7 @@
 ## Projede kullanılan uygulamalar
  Projeyi bilgisayarınıza download ettikten sonra kullanabilmek için proje klasöründe
  > npm install
+ 
  > npm start
 
 uygulamalısınız
@@ -28,10 +29,10 @@ uygulamalısınız
 
 Proje basit bir react-redux uygulamasıdır. 
 
- Sepete ürün ekleme,
- Seppetten ürün silme,
- Sepetteki ürünü artırma,
- Sepetteki ürünü azaltma,
- Toplam sepet tutarını gösterme
+ - Sepete ürün ekleme,
+ - Seppetten ürün silme,
+ - Sepetteki ürünü artırma,
+ - Sepetteki ürünü azaltma,
+ - Toplam sepet tutarını gösterme
 
 gibi özellikleri vardır... 
