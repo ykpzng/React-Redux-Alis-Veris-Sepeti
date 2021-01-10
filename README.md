@@ -1,6 +1,6 @@
 # React Redux ile Alış-Veriş Sepeti Uygulaması
 
-## Projede kullanılan uygulamalar
+## Projeyi başlatma
  Projeyi bilgisayarınıza download ettikten sonra kullanabilmek için proje klasöründe
  > npm install
  
