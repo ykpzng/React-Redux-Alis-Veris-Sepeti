@@ -1,5 +1,9 @@
 # React Redux ile Alış-Veriş Sepeti Uygulaması
 
+## Siteyi inceleyin...
+  
+  https://recat-redux-alisveris-sepeti.netlify.app/
+
 ## Projeyi başlatma
  Projeyi bilgisayarınıza download ettikten sonra kullanabilmek için proje klasöründe
  > npm install
