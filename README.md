@@ -2,7 +2,7 @@
 
 ## Siteyi inceleyin...
   
-  https://recat-redux-alisveris-sepeti.netlify.app/
+  https://nifty-jackson-22e55f.netlify.app
 
 ## Projeyi başlatma
  Projeyi bilgisayarınıza download ettikten sonra kullanabilmek için proje klasöründe
