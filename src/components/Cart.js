@@ -21,8 +21,7 @@ class Cart extends Component {
   }
 
   render() {
-    console.log("Carttan : ", this.props);
-
+    console.log("Cart=> cart :", this.props.items);
     return (
       <div className="card mb-3">
         <p><strong>Sepet Toplamı : &#8378; {this.props.total}</strong></p>
@@ -38,7 +37,9 @@ class Cart extends Component {
                   <p className="card-text">{item.desc}</p>
                   <span><b>Fiyat : &#8378; {item.price}</b></span>
                   <p></p>
-                  <span type="button"><PlusCircle onClick={() => { this.handleAddQuantity(item.id) }} /></span>
+                  <span type="button">
+                    {item.inventory > 0 && <PlusCircle onClick={() => { this.handleAddQuantity(item.id) }} />}
+                  </span>
 
                   <span> <b> {item.quantity} </b> </span>
 

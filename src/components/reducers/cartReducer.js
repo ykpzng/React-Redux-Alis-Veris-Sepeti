@@ -15,13 +15,16 @@ function cartReducer(state = INITIAL_STATE, action) {
     // Eklenen elemanlarda aynı eleman varsa o elenanın sayısını artırmak için
     let existed_item = state.addedItems.find(item => action.id === item.id);
     if (existed_item) {
+      addedItem.inventory -= 1;
       addedItem.quantity += 1;
       return {
         ...state,
+        addedItems: [...state.addedItems],
         total: state.total + addedItem.price
       }
     } else {
       addedItem.quantity = 1;
+      addedItem.inventory -= 1;
       //calculating the total
       let newTotal = state.total + addedItem.price
       return {
@@ -38,7 +41,8 @@ function cartReducer(state = INITIAL_STATE, action) {
 
     //calculating the total
     let newTotal = state.total - (itemToRemove.price * itemToRemove.quantity)
-
+    itemToRemove.inventory += itemToRemove.quantity;
+    itemToRemove.quantity = 0;
     return {
       ...state,
       addedItems: new_items,
@@ -48,6 +52,7 @@ function cartReducer(state = INITIAL_STATE, action) {
   if (action.type === ADD_QUANTITY) {
     let addedItem = state.items.find(item => item.id === action.id)
     addedItem.quantity += 1
+    addedItem.inventory -= 1;
     let newTotal = state.total + addedItem.price
     return {
       ...state,
@@ -60,6 +65,8 @@ function cartReducer(state = INITIAL_STATE, action) {
     if (addedItem.quantity === 1) {
       let new_items = state.addedItems.filter(item => item.id !== action.id)
       let newTotal = state.total - addedItem.price
+      addedItem.inventory += 1;
+      addedItem.quantity = 0;
       return {
         ...state,
         addedItems: new_items,
@@ -68,6 +75,7 @@ function cartReducer(state = INITIAL_STATE, action) {
     }
     else {
       addedItem.quantity -= 1;
+      addedItem.inventory += 1;
       let newTotal = state.total - addedItem.price
       return {
         ...state,
